@@ -11,10 +11,10 @@ from datetime import timedelta
 
 # Home Page
 def home(request):
-	banners=models.Banners.objects.all()
+	# banners=models.Banners.objects.all()
 	services=models.Service.objects.all()[:3]
 	gimgs=models.GalleryImage.objects.all().order_by('-id')[:9]
-	return render(request, 'home.html',{'banners':banners,'services':services,'gimgs':gimgs})
+	return render(request, 'home.html',{'services':services,'gimgs':gimgs})
 
 # PageDetail
 def page_detail(request,id):
@@ -205,7 +205,7 @@ def trainer_profile(request):
 	return render(request, 'trainer/profile.html',{'form':form,'msg':msg})
 
 # Notifications
-def notifs(request):
+def notif(request):
 	data=models.Notify.objects.all().order_by('-id')
 	return render(request, 'notifs.html')
 

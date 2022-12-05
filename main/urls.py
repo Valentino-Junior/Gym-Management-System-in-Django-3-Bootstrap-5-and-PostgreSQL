@@ -31,7 +31,7 @@ urlpatterns=[
 	path('trainer_changepassword',views.trainer_changepassword,name='trainer_changepassword'),
 	path('trainer_notifs',views.trainer_notifs,name='trainer_notifs'),
 	# Notifications
-	path('notifs',views.notifs,name='notifs'),
+	path('notif',views.notif,name='notif'),
 	path('get_notifs',views.get_notifs,name='get_notifs'),
 	path('mark_read_notif',views.mark_read_notif,name='mark_read_notif'),
 	# Messages
