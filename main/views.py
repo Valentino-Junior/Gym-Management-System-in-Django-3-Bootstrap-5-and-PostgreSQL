@@ -230,7 +230,7 @@ def get_notifs(request):
 				'notifStatus':notifStatus
 			})
 	# jsonData=serializers.serialize('json', data)
-	return JsonResponse({'data':jsonData,'totalUnread':totalUnread})
+	return JsonResponse({'notifs':jsonData,'totalUnread':totalUnread})
 
 # Mark Read By user
 def mark_read_notif(request):
